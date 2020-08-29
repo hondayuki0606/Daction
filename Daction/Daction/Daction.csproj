@@ -91,9 +91,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Program\GetLiveChatID.cs" />
-    <Compile Include="Program\GetLiveCHatMessage.cs" />
-    <Compile Include="Program\Programs.cs" />
     <Compile Include="Util\Converter\DataConvertercs.cs" />
     <Compile Include="ViewModel\Dialog\GoogleMap.cs" />
     <Compile Include="Views\Dialog\FileUpload.xaml.cs">
