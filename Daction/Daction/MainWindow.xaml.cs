@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,17 @@ namespace Daction
         public MainWindow()
         {
             InitializeComponent();
+
+            // ResourceManagerを取得する
+            System.Resources.ResourceManager resource = Properties.Resources.ResourceManager;
+            // "Sample"に値を取得してコンソールに出力する
+            string message = resource.GetString("map.html");
+            System.Console.WriteLine(message);
+            string html = Properties.Resources.map;
+
+            string outhtml = @html;
+            this.WebView.NavigateToString(outhtml);
+
         }
     }
 }
