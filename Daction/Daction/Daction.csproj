@@ -70,6 +70,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Util\Converter\DataConvertercs.cs" />
+    <Compile Include="ViewModel\Dialog\GoogleMap.cs" />
+    <Compile Include="Views\Dialog\FileUpload.xaml.cs">
+      <DependentUpon>FileUpload.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialog\GoogleMap.xaml.cs">
+      <DependentUpon>GoogleMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialog\Youtube.xaml.cs">
+      <DependentUpon>Youtube.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -104,11 +115,20 @@
   <ItemGroup>
     <None Include="Resources\map.html" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Util\" />
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Page Include="Views\Dialog\FileUpload.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\GoogleMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\Youtube.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

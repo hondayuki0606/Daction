@@ -4,11 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Daction.Views"
-        xmlns:Ct="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
+        xmlns:ct="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Ct:WebView x:Name="WebView" />
+        <Button x:Name="GoogleMapButton" Content="GoogleMap" HorizontalAlignment="Left" Margin="120,360,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="YoutubeButton" Content="Youtube" HorizontalAlignment="Left" Margin="240,360,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="FileUploadButton" Content="FileUpload" HorizontalAlignment="Left" Height="20" Margin="360,360,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
 

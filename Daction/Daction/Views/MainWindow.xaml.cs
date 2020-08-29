@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Daction.Views.Dialog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,17 +23,34 @@ namespace Daction.Views
         public MainWindow()
         {
             InitializeComponent();
-            // ResourceManagerを取得する
-            System.Resources.ResourceManager resource = Properties.Resources.ResourceManager;
-            // "Sample"に値を取得してコンソールに出力する
-            string message = resource.GetString("map.html");
-            System.Console.WriteLine(message);
-            string html = Properties.Resources.map;
+            // Associate event handler to the button. You can remove the event
+            // handler using "-=" syntax rather than "+=".
+            this.GoogleMapButton.Click += new RoutedEventHandler(GoogleMapButton_Click);
+            this.YoutubeButton.Click  += new RoutedEventHandler(YoutubeButton_Click);
+            this.FileUploadButton.Click += new RoutedEventHandler(FileUploadButton_Click);
 
-            string outhtml = @html;
-            this.WebView.NavigateToString(outhtml);
+        }
+
+
+        void GoogleMapButton_Click(object sender, RoutedEventArgs e)
+        {
+            GoogleMap sw = new GoogleMap();
+            sw.Show();
+
+        }
+
+        void YoutubeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Youtube sw = new Youtube();
+            sw.Show();
+
+        }
+
+        void FileUploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            FileUpload sw = new FileUpload();
+            sw.Show();
 
         }
     }
 }
-
