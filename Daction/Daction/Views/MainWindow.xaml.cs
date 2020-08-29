@@ -1,17 +1,5 @@
 ﻿using Daction.Views.Dialog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Daction.Views
 {
@@ -31,7 +19,6 @@ namespace Daction.Views
 
         }
 
-
         void GoogleMapButton_Click(object sender, RoutedEventArgs e)
         {
             GoogleMap sw = new GoogleMap();
@@ -42,6 +29,13 @@ namespace Daction.Views
         void YoutubeButton_Click(object sender, RoutedEventArgs e)
         {
             Youtube sw = new Youtube();
+            sw.Show();
+
+        }
+
+        void TwitterButton_Click(object sender, RoutedEventArgs e)
+        {
+            Twitter sw = new Twitter();
             sw.Show();
 
         }

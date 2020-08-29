@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Sample</title>
+</head>
+<body>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <div id="player"></div>
+    <div class="">
+        <input id="inputText" type="text" name="" value="">
+        //各種ボタンの設置
+        <button id="searchButton" type="button" name="button">検索</button>
+        <button id="nextButton" type="button" name="button">次へ</button>
+        <button id="prevButton" type="button" name="button">戻る</button>
+        <ul></ul>
+    </div>
+    <script>
+        $(function () {
+            //ページトークンの初期化
+            var pageToken = "";
+            var nextPageToken = "";
+            var prevPageToken = "";
+            //Youtube data api をjsonファイルで取得
+            function getJsonFile() {
+                $.getJSON(
+                    'https://www.googleapis.com/youtube/v3/search?key=APIキー名&part=id,snippet',
+                    {
+                        q: $('#inputText').val(),
+                        type: 'video',
+                        maxResults: 50,
+                        pageToken: pageToken
+                    },
+                    function (data) {
+                        $.each(data['items'], function (i, item) {
+                            $('ul').append('<li>' + item.snippet.title);
+
+                        });
+                        nextPageToken = data.nextPageToken;
+                        prevPageToken = data.prevPageToken;
+                    });
+            }
+
+            $('#searchButton').on('click', function () {
+                $('li').remove();
+                pageToken = "";
+                getJsonFile();
+            })
+            $('#nextButton').on('click', function () {
+                $('li').remove();
+                pageToken = nextPageToken;
+                getJsonFile();
+
+            })
+
+            $('#prevButton').on('click', function () {
+                $('li').remove();
+                pageToken = prevPageToken;
+                getJsonFile();
+            })
+        });
+    </script>
+</body>
+</html>
