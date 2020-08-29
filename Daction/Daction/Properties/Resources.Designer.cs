@@ -61,12 +61,57 @@ namespace Daction.Properties {
         }
         
         /// <summary>
-        ///   &lt;html&gt;&lt;body&gt;aaaaa&lt;/body&gt;&lt;/html&gt;
-        /// に類似しているローカライズされた文字列を検索します。
+        ///   &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///    &lt;title&gt;Sample_GoogleMap&lt;/title&gt;
+        ///    &lt;script src=&quot;http://maps.google.com/maps/api/js?key=APIキー名&amp;language=ja&quot;&gt;&lt;/script&gt;
+        ///    &lt;style&gt;
+        ///        html {
+        ///            height: 100%
+        ///        }
+        ///        body {
+        ///            height: 100%
+        ///        }
+        ///        #map {
+        ///            height: 100%;
+        ///            width: 100%
+        ///        }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+        ///    &lt;script&gt;
+        ///        var mapPosition = { lat: 35.6811673, lng: 139.7670 [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string map {
             get {
                 return ResourceManager.GetString("map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;ja&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;utf-8&quot;&gt;
+        ///    &lt;title&gt;jQuery Sample&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///
+        ///    &lt;script src=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+        ///    &lt;div id=&quot;player&quot;&gt;&lt;/div&gt;
+        ///    &lt;div class=&quot;&quot;&gt;
+        ///        &lt;input id=&quot;inputText&quot; type=&quot;text&quot; name=&quot;&quot; value=&quot;&quot;&gt;
+        ///        //各種ボタンの設置
+        ///        &lt;button id=&quot;searchButton&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;検索&lt;/button&gt;
+        ///        &lt;button id=&quot;nextButton&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;次へ&lt;/button&gt;
+        ///        &lt;button id=&quot;pre [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string youtube {
+            get {
+                return ResourceManager.GetString("youtube", resourceCulture);
             }
         }
     }

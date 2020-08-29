@@ -10,7 +10,8 @@
     <Grid>
         <Button x:Name="GoogleMapButton" Content="GoogleMap" HorizontalAlignment="Left" Margin="120,360,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="YoutubeButton" Content="Youtube" HorizontalAlignment="Left" Margin="240,360,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="FileUploadButton" Content="FileUpload" HorizontalAlignment="Left" Height="20" Margin="360,360,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="TwitterButton" Content="Twitter" HorizontalAlignment="Left" Margin="360,360,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="FileUploadButton" Content="FileUpload" HorizontalAlignment="Left" Height="20" Margin="480,360,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
 
